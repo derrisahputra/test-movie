@@ -5,6 +5,9 @@
 </template>
 
 <style lang="scss">
+::-webkit-scrollbar {
+  display: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,7 +17,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: #10141B;
   max-width: 1920px;
   min-width: 1920px;
   margin: auto;

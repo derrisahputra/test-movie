@@ -1,5 +1,5 @@
 module.exports = {
-    baseURL : "https://api.themoviedb.org/3/movie"
+    baseURL : "https://api.themoviedb.org/3"
 }
 
 

@@ -6,8 +6,8 @@
       :loop="true"
       :mouseDrag="false"
       :autoplayHoverPause="false"
-      :autoplayTimeout="9000"
-      :speed="1000"
+      :autoplayTimeout="5000"
+      :speed="2000"
       :paginationPadding="0"
       :paginationEnabled="false"
     >
@@ -250,10 +250,9 @@ img {
   .overlay {
     width: 35%;
     height: 100%;
-    border-radius: 0 100px 0 0;
     position: absolute;
     background: #10141b;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 </style>
