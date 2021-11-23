@@ -6,4 +6,5 @@ module.exports = {
     upComing:  api.baseURL + "/movie/upcoming?api_key=" + api_key,
     topRated:  api.baseURL + "/tv/top_rated?api_key=" + api_key,
     onTheAir:  api.baseURL + "/tv/on_the_air?api_key=" + api_key,
+    search:  api.baseURL + "/search/movie?api_key=" + api_key,
 }

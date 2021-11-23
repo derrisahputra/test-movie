@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    <h1 class="sub-title">On The Air TV Show <span><a href="#" style="font-size: 18px; color: white; margin-left: 20px">Show All On The Air Tv Show</a></span></h1>
+    <h1 class="sub-title">
+      On The Air TV Show
+      <span
+        ><a href="#" style="font-size: 18px; color: white; margin-left: 20px"
+          >Show All On The Air Tv Show</a
+        ></span
+      >
+    </h1>
     <div class="card-container">
       <div class="card" v-for="dt in data" :key="dt.id">
         <div class="add-to-watchlist">
@@ -12,6 +19,7 @@
           :alt="'Poster of ' + dt.original_name"
         />
         <img
+          class="main-poster"
           :src="'https://image.tmdb.org/t/p/w300/' + dt.poster_path"
           :alt="'Poster of ' + dt.original_name"
         />
@@ -23,7 +31,9 @@
               alt="IMDB Logo"
             />
             <span class="vote-average"> {{ dt.vote_average }} / 10</span>
-            <span class="release-date"> {{ dt.first_air_date.slice(0, 4) }}</span>
+            <span class="release-date">
+              {{ dt.first_air_date.slice(0, 4) }}</span
+            >
           </p>
           <p class="title">{{ dt.original_name }}</p>
         </div>
@@ -129,7 +139,7 @@ export default {
     height: 250px !important;
     width: 200px !important;
     margin-bottom: -375px;
-    filter: blur(.5rem) !important;
+    filter: blur(0.5rem) !important;
   }
 
   .wrapper-detail {
@@ -170,6 +180,15 @@ export default {
     box-shadow: 2px 15px 20px rgba(0, 0, 0, 0.89);
     z-index: 2 !important;
     filter: blur(0);
+    transition: 0.2s;
+  }
+
+  img.main-poster {
+    &:hover {
+      cursor: pointer;
+      transition: 0.2s;
+      transform: scale(1.01) translateY(-7px) !important;
+    }
   }
 }
 .card-container {

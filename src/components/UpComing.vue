@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    <h1 class="sub-title">Up Coming Movies <span><a href="#" style="font-size: 18px; color: white; margin-left: 20px">Show All Movies</a></span></h1>
+    <h1 class="sub-title">
+      Up Coming Movies
+      <span
+        ><a href="#" style="font-size: 18px; color: white; margin-left: 20px"
+          >Show All Movies</a
+        ></span
+      >
+    </h1>
     <div class="card-container">
       <div class="card" v-for="dt in data" :key="dt.id">
         <div class="add-to-watchlist">
@@ -12,6 +19,7 @@
           :alt="'Poster of ' + dt.original_title"
         />
         <img
+          class="main-poster"
           :src="'https://image.tmdb.org/t/p/w300/' + dt.poster_path"
           :alt="'Poster of ' + dt.original_title"
         />
@@ -83,6 +91,7 @@ export default {
 </style>
 
 <style lang="scss" scoped>
+
 .hollow-dots-spinner {
   position: absolute;
   top: 50%;
@@ -129,7 +138,7 @@ export default {
     height: 250px !important;
     width: 200px !important;
     margin-bottom: -375px;
-    filter: blur(.5rem) !important;
+    filter: blur(0.5rem) !important;
   }
 
   .wrapper-detail {
@@ -170,6 +179,15 @@ export default {
     box-shadow: 2px 15px 20px rgba(0, 0, 0, 0.89);
     z-index: 2 !important;
     filter: blur(0);
+    transition: 0.2s;
+  }
+
+  img.main-poster {
+    &:hover {
+      cursor: pointer;
+      transition: 0.2s;
+      transform: scale(1.01) translateY(-7px) !important;
+    }
   }
 }
 .card-container {
