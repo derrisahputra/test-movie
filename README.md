@@ -92,7 +92,7 @@ git clone https://github.com/derrisahputra/test-movie.git
 npm install
 ```
 
-### Jalankan Dengan
+## Jalankan Dengan
 ```
 npm run serve
 ```
