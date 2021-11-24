@@ -10,6 +10,6 @@ app.get(/.*/, function (req, res) {
     res.sendFile(path.join(__dirname, '/dist/index.html'))
 })
 
-const port = process.env.VUE_APP_PORT_SERVER || 8000;
+const port = process.env.VUE_APP_PORT_SERVER || 8080;
 app.listen(port);
 console.log(`App is listening on port: ${port}`);
